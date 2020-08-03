@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @album.title %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @album.rating %>
+</p>
+<%= @album.songs.each do |song| %>
+  <%= song.title %>
+  <% end %>
+
+<%= link_to 'Edit', edit_album_path(@album) %> |
+<%= link_to 'Back', albums_path %>
